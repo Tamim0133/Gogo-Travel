@@ -3,8 +3,11 @@
 >>> Popular Tour Destinations *
 >>> Choose your destination ***
 >>> why Choose use **
->>> Deals and Discounts *****
+# >>> Deals and Discounts ***** 
 >>> Perfect place vdo *
 >>> Newsletter ***
->>> Footer *
+>>> Footer * 
 
+primary color : orange color
+secondary text : gray color
+image text : white color

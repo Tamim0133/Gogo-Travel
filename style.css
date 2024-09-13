@@ -1,12 +1,345 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    font-family: "Mulish", sans-serif;
+}
+
+main,
+header {
     margin-left: 10vw;
     margin-right: 10vw;
+}
+
+
+
+h1,
+h2 {
+    margin: 0;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+button {
+    color: white;
+    font-weight: bold;
 }
 
 :root {
     --primary-color: #ff6347;
     --secondary-color: #666;
 }
+
+
+
+/*--------------------------------
+            Navbar
+----------------------------------*/
+nav .links ul {
+    list-style-type: none;
+}
+
+nav .links li a {
+    color: black;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: var(--primary-color);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.links>ul {
+    display: flex;
+    gap: 20px;
+}
+
+.heading h2 {
+    display: flex;
+    gap: 10px;
+}
+
+.hamburger {
+    display: none;
+}
+
+/*--------------------------------
+        Hero Section
+----------------------------------*/
+/* Hero Section Styling */
+.hero-section {
+    position: relative;
+    background-image: url('Images/Group\ 38.png');
+    /* Replace with your actual image URL */
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Background overlay */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    /* Dark overlay */
+    border-radius: 5px;
+}
+
+/* Hero content */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    color: gainsboro;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 60%;
+}
+
+/* Search box styling */
+.search-box {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    /* max-width: 80vw; */
+    margin: 0 auto;
+}
+
+/* Input fields styling */
+.search-box input,
+.search-box select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 180px;
+    font-size: 16px;
+}
+
+/* Button styling */
+.search-box button {
+    padding: 10px 20px;
+    background-color: #f1592a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: #d24a1b;
+}
+
+/*--------------------------------
+        Popular Tours
+----------------------------------*/
+.popular-tours {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+    line-height: 1.8rem;
+
+}
+
+/*--------------------------------
+        Gallery
+----------------------------------*/
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.gallery> :nth-child(1) {
+    grid-column: span 2;
+}
+
+.gallery> :nth-child(2) {
+    grid-column: span 2;
+}
+
+.gallery> :nth-child(3) {
+    grid-column: span 1;
+}
+
+.gallery> :nth-child(4) {
+    grid-column: span 2;
+}
+
+.gallery> :nth-child(5) {
+    grid-column: span 1;
+}
+
+.gallery> :nth-child(6) {
+    grid-column: span 1;
+    width: 145%;
+}
+
+.gallery> :nth-child(7) {
+    grid-column: span 3;
+    width: 85%;
+    margin-left: 15%;
+}
+
+
+.gallery-item {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.location-name {
+    /* position: absolute; */
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin: auto;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Fade effect */
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease-in-out;
+}
+
+.gallery-item:hover .location-name {
+    background: rgba(0, 0, 0, 0.0);
+    /* Darker on hover */
+}
+
+
+
+
+
+/*-----------------------------------
+        Why Choose US
+-----------------------------------*/
+/* Overall section styling */
+.why-choose-us {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.section-header p {
+    font-size: 18px;
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+}
+
+/* Features Grid */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Each feature card */
+.feature-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+/* Hover effect on feature cards */
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Icon styling */
+.feature-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Different background colors for each card */
+.feature-card:nth-child(1) {
+    background-color: #fff7e6;
+}
+
+.feature-card:nth-child(2) {
+    background-color: #e6f7ff;
+}
+
+.feature-card:nth-child(3) {
+    background-color: #fff0f0;
+}
+
+.feature-card>i {
+    font-size: 3rem;
+}
+
+
+
+/*-----------------------------------
+         Deals Section
+-----------------------------------*/
 
 .deals-header {
     max-width: 50%;
@@ -22,8 +355,7 @@ body {
     min-width: 80vw;
     border-radius: 15px;
     overflow: hidden;
-    background: url('https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg') no-repeat center/cover;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -44,11 +376,11 @@ body {
 }
 
 .card-content {
-    height: 400px;
+    /* height: 400px; */
     width: 50%;
 
     padding: 50px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
 
     box-sizing: border-box;
     border-radius: 15px;
@@ -56,12 +388,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
 }
 
-.card-content h2 {
-    margin: 0;
-}
 
 .card-content p {
     color: var(--secondary-color);
@@ -76,7 +405,8 @@ body {
     color: var(--primary-color);
 }
 
-.card-content button {
+.card-content button,
+.primary-btn {
     padding: 10px 20px;
     background-color: var(--primary-color);
     color: white;
@@ -87,7 +417,8 @@ body {
     width: 150px;
 }
 
-.card-content button:hover {
+.card-content button,
+.primary-btn:hover {
     background-color: #ff4500;
 }
 
@@ -101,13 +432,279 @@ body {
     color: var(--primary-color);
 }
 
+/*---------------------------------
+         Perfect Place section 
+------------------------------------ */
+.perfect-place {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.perfect-place h2 {
+    margin: 50px auto;
+}
+
+.perfect-place {
+    line-height: 2em;
+}
+
+/*---------------------------------
+         .news-letter section 
+------------------------------------- */
+
+.container {
+    display: flex;
+    margin: 0 auto;
+}
+
+.newsletter {
+    width: 35%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.newsletter form input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.newsletter form button {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f1592a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.newsletter form button:hover {
+    background-color: #d24a1b;
+}
+
+/* Image section styles */
+.image-container {
+    position: relative;
+    margin-left: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Offer label overlay */
+.offer {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f1592a;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    transform: rotate(-10deg);
+    /* Rotating the label */
+}
+
+.offer p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.icons i {
+    color: black;
+}
+
+footer {
+    margin-top: 150px;
+    background-color: #1313181f;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+footer>section {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+
+
+
+
+
 @media (max-width: 768px) {
-    * {
+    html {
         font-size: 14px;
     }
 
-    body {
+    main {
         margin: 0 5%;
+    }
+
+    .search-box {
+        flex-direction: column;
+        padding: 5px;
+        /* align-items: flex-start; */
+
+    }
+
+
+
+
+    .links a:hover {}
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+
+    .heading h3 {
+        /* display: flex; */
+        margin: 0;
+        gap: 2px !important;
+    }
+
+    .heading>img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .hamburger {
+        display: inline;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+        margin-bottom: 30px;
+        font-weight: bold;
+    }
+
+    .hero-content p {
+
+        width: 90%;
+    }
+
+    .search-box input,
+    .search-box select {
+        width: 80%;
+    }
+
+    .search-box button {
+        font-size: 1rem;
+        width: 80%;
+
+    }
+
+
+    .popular-tours {
+        grid-template-columns: repeat(1, 1fr);
+        /* gap: 40px; */
+        line-height: 1.8rem;
+
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
+        row-gap: 20px;
+    }
+
+    .gallery> :nth-child(1) {
+        grid-column: span 1;
+    }
+
+    .gallery> :nth-child(2) {
+        grid-column: span 1;
+    }
+
+    .gallery> :nth-child(3) {
+        grid-column: span 1;
+    }
+
+    .gallery> :nth-child(4) {
+        grid-column: span 1;
+    }
+
+    .gallery> :nth-child(5) {
+        grid-column: span 1;
+    }
+
+    .gallery> :nth-child(6) {
+        grid-column: span 1;
+        width: 100%;
+    }
+
+    .gallery> :nth-child(7) {
+        grid-column: span 1;
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    .gallery-item {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+        height: 300px;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .location-name {
+        /* position: absolute; */
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        margin: auto;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        background: rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Fade effect */
+        text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        transition: background 0.3s ease-in-out;
+    }
+
+    .gallery-item:hover .location-name {
+        background: rgba(0, 0, 0, 0.0);
+        /* Darker on hover */
     }
 
     .deals-header {
@@ -118,19 +715,114 @@ body {
         transform: translateY(0px);
     }
 
+    .card {
+        min-height: 600px;
+        border-radius: 5px;
+    }
+
     .card-content-right {
-        margin: 15% auto;
+        margin: 0 auto;
+        margin-top: 50%;
     }
 
     .card-content-left {
-        margin: 15% auto;
+        margin: 0 auto;
+        margin-top: 50%;
     }
 
     .card-content {
-
-        height: 400px;
+        /* height: 400px; */
         width: 90%;
-
+        background: rgba(255, 255, 255, 0.9);
         padding: 15px;
+        gap: 10px;
+
     }
+
+    .card-content p {
+        margin: 0;
+    }
+
+    .card-heading {
+        flex-wrap: wrap;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .news-letter .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+
+
+    .newsletter {
+        width: 90%;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid var(--primary-color);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    /* .newsletter form input {
+        width: 240px;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .newsletter form button {
+        padding: 10px;
+        margin: 10px 0;
+        background-color: #f1592a;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 260px;
+    }
+
+    .newsletter form button:hover {
+        background-color: #d24a1b;
+    } */
+
+    /* Image section styles */
+    .image-container {
+        position: relative;
+        margin-left: 0px;
+    }
+
+    .perfect-place {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer {
+        margin-top: 150px;
+        padding: 10px;
+    }
+
+    footer>section {
+        width: 100%;
+
+    }
+
+
+
+
 }
